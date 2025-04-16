@@ -5,9 +5,10 @@ import { NextResponse } from 'next/server';
 export async function POST(req) {
   try {
     const body = await req.json();
+    const { amount, description, date, category } = body;
 
     await connectDB();
-    const newTransaction = await Transaction.create(body);
+    const newTransaction = await Transaction.create({ amount, description, date, category });
 
     if (!newTransaction) {
       return NextResponse.json(

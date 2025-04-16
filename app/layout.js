@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Toaster } from 'sonner';
+import { Toaster } from "sonner";
+import { TransactionProvider } from "@/context/TransactionContext"; // 👈 Add this
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,7 +25,9 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
         <Toaster richColors position="top-right" />
-        {children}
+        <TransactionProvider>
+          {children}
+        </TransactionProvider>
       </body>
     </html>
   );

@@ -59,13 +59,23 @@ export default function TransactionModal({ txn, isOpen, onClose, onUpdate }) {
 
           <div className="flex flex-col">
             <label className="text-sm text-gray-600 mb-1">Category</label>
-            <Input
-              type="text"
+            <select
               name="category"
               value={editedTxn.category || ''}
               onChange={handleChange}
-              className="text-lg"
-            />
+              className="w-full p-2 border rounded-md"
+            >
+              <option value="">Select Category</option>
+              <option value="Groceries">Groceries</option>
+              <option value="Food">Food</option>
+              <option value="Vegetables">Vegetables</option>
+              <option value="Transport">Transport</option>
+              <option value="Shopping">Shopping</option>
+              <option value="Bills">Bills</option>
+              <option value="Entertainment">Entertainment</option>
+              <option value="Health">Health</option>
+              <option value="Other">Other</option>
+            </select>
           </div>
 
           <div className="flex flex-col">

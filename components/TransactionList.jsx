@@ -6,36 +6,17 @@ import SingleTransaction from './SingleTransaction';
 import TransactionModal from './TransactionEditModal';
 import MonthlyBarChart from './MonthlybarChart';
 
-export default function TransactionList({ fetchTxns }) {
-  const [transactions, setTransactions] = useState([]);
+export default function TransactionList({ transactions, setTransactions }) {
   const [selectedTxn, setSelectedTxn] = useState(null);
   const [openModal, setOpenModal] = useState(false);
   const [reverseTransactions, setReverseTransactions] = useState([])
-
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get('/api/transactions');
-        setTransactions(res.data);
-      } catch (err) {
-        console.error('Error fetching transactions:', err);
-      }
-    };
-
-    fetchData();
-  }, [fetchTxns]);
-
-  useEffect(() => {
-    setReverseTransactions(transactions.reverse());
-  }, [transactions])
-
    
   const handleEdit = (txn) => {
     setSelectedTxn(txn);
     setOpenModal(true);
   };
 
+  useEffect(() => setReverseTransactions(transactions.reverse()), [transactions])
  
   const handleDelete = async (id) => {
     try {

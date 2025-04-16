@@ -129,3 +129,10 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.bgCategory{
+  background-image: url("/categoryBg1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
