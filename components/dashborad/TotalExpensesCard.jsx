@@ -1,7 +1,14 @@
 'use client';
 
+import { useEffect, useState } from "react";
+
 export default function TotalExpensesCard({ transactions }) {
-  const total = transactions.reduce((result, txn) => result + txn.amount, 0);
+  const [total, setTotal] = useState(0);
+
+  useEffect(() => {
+    const newTotal = transactions.reduce((result, txn) => result + Number(txn.amount), 0);
+    setTotal(newTotal);
+  }, [transactions]);
 
   return (
     <div className="bg-white rounded-xl shadow p-4 w-full">

@@ -18,7 +18,7 @@ export default function CategoryBreakdown({ transactions }) {
   return (
     <div className="bg-white rounded-xl shadow p-4 w-full">
       <h2 className="text-sm font-medium text-gray-500 mb-4">Category Breakdown</h2>
-      <ul className="space-y-2">
+      <ul className="space-y-2 max-h-[123px] overflow-y-auto pr-1">
         {sortedCategories.map(([category, total], index) => (
           <li
             key={index}
