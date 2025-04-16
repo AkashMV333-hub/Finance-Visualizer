@@ -4,15 +4,14 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import SingleTransaction from './SingleTransaction';
 import TransactionModal from './TransactionEditModal';
+import MonthlyBarChart from './MonthlybarChart';
 
-export default function TransactionList({ addTransaction }) {
+export default function TransactionList({ fetchTxns }) {
   const [transactions, setTransactions] = useState([]);
   const [selectedTxn, setSelectedTxn] = useState(null);
   const [openModal, setOpenModal] = useState(false);
+  const [reverseTransactions, setReverseTransactions] = useState([])
 
-  useEffect(() => {
-    setTransactions((prev) => [addTransaction, ...prev])
-  }, [addTransaction])
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,7 +24,11 @@ export default function TransactionList({ addTransaction }) {
     };
 
     fetchData();
-  }, []);
+  }, [fetchTxns]);
+
+  useEffect(() => {
+    setReverseTransactions(transactions.reverse());
+  }, [transactions])
 
    
   const handleEdit = (txn) => {
@@ -52,7 +55,10 @@ export default function TransactionList({ addTransaction }) {
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 mb-10">
+       <MonthlyBarChart transactions={reverseTransactions} /> 
+
+       <h1 className='font-bold font-black text-2xl'>Transactions List</h1>
       {transactions.length === 0 ? (
         <p>No transactions available.</p>
       ) : (
