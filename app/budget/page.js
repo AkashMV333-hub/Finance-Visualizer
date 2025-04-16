@@ -30,7 +30,7 @@ export default function BudgetPage() {
   return (
     <div className="w-screen h-screen bgBudget">
       <div className='w-screen h-screen flex flex-col items-center justify-center overflow-y-auto'>
-      <div className="w-100 md:w-3/5 border-0 rounded-2xl " style={{height: "calc(100vh - 50px)"}}> 
+      <div className="w-screen md:w-3/5 border-0 rounded-2xl " style={{height: "calc(100vh - 50px)"}}> 
         <div className="max-w-5xl mx-auto px-4 py-6">
             <Navbar/>
             <BudgetForm onBudgetAdded={() => setRefresh((prev) => !prev)} />

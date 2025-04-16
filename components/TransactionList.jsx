@@ -36,7 +36,7 @@ export default function TransactionList({ transactions, setTransactions }) {
   };
 
   return (
-    <div className="space-y-4 mb-10 ">
+    <div className="space-y-4 mb-6 ">
       <MonthlyBarChart transactions={reverseTransactions} /> 
 
       <div className='flex flex-col gap-4 bg-white p-8 rounded-xl'>

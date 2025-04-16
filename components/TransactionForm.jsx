@@ -42,7 +42,7 @@ export default function TransactionForm({ setTransactions }) {
   };
 
   return (
-    <div className='w-full bg-pink-100 border border-white p-12 flex flex-col justify-center items-center mt-12 rounded-xl'>
+    <div className='w-full bg-pink-100 border border-white p-12 flex flex-col justify-center items-center mt-6 rounded-xl'>
       <form onSubmit={handleSubmit} className="space-y-4 p-4 rounded-lg border w-full max-w-xl mx-auto bg-white">
         <h1 className='font-bold font-black text-2xl'>New Transaction</h1>
         <div>
