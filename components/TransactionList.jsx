@@ -36,31 +36,33 @@ export default function TransactionList({ transactions, setTransactions }) {
   };
 
   return (
-    <div className="space-y-4 mb-10">
-       <MonthlyBarChart transactions={reverseTransactions} /> 
+    <div className="space-y-4 mb-10 ">
+      <MonthlyBarChart transactions={reverseTransactions} /> 
 
-       <h1 className='font-bold font-black text-2xl'>Transactions List</h1>
-      {transactions.length === 0 ? (
-        <p>No transactions available.</p>
-      ) : (
-        transactions.map((txn) => (
-          <SingleTransaction
-            key={txn._id}
-            txn={txn}
-            onEdit={() => handleEdit(txn)}
-            onDelete={() => handleDelete(txn._id)}
+      <div className='flex flex-col gap-4 bg-white p-8 rounded-xl'>
+        <h1 className='font-bold font-black text-2xl'>Transactions List</h1>
+        {transactions.length === 0 ? (
+          <p>No transactions available.</p>
+        ) : (
+          transactions.map((txn) => (
+            <SingleTransaction
+              key={txn._id}
+              txn={txn}
+              onEdit={() => handleEdit(txn)}
+              onDelete={() => handleDelete(txn._id)}
+            />
+          ))
+        )}
+
+        {selectedTxn && (
+          <TransactionModal
+            txn={selectedTxn}
+            isOpen={openModal}
+            onClose={() => setOpenModal(false)}
+            onUpdate={handleUpdate}
           />
-        ))
-      )}
-
-      {selectedTxn && (
-        <TransactionModal
-          txn={selectedTxn}
-          isOpen={openModal}
-          onClose={() => setOpenModal(false)}
-          onUpdate={handleUpdate}
-        />
-      )}
+        )}
+       </div>
     </div>
   );
 }

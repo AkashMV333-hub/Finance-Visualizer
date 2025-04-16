@@ -7,8 +7,9 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const navItems = [
-    { name: 'Dashboard', path: '/dashboard' },
     { name: 'Transactions', path: '/' },
+    { name: 'Dashboard', path: '/dashboard' },
+    { name: 'Budget', path: '/budget'}
   ];
 
   return (

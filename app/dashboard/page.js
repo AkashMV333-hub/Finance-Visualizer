@@ -14,7 +14,7 @@ export default function Dashboard() {
     useEffect(() => console.log(`Transactions ${transactions}`), [transactions]);
 
   return (
-    <div className="flex flex-col items-center justify-center overflow-hidden bgCategory" style={{width: "100vw", height: "100vh"}}>
+    <div className="w-screen h-screen flex flex-col items-center justify-center overflow-hidden bgCategory">
       <div className="w-100 md:w-3/5 overflow-hidden border-0 rounded-2xl " style={{height: "calc(100vh - 50px)"}}>
         <Navbar/>
         <div className=" space-y-6 overflow-hidden mt-4">

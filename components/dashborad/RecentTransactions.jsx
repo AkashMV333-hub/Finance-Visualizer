@@ -5,7 +5,7 @@ import { format } from 'date-fns';
 export default function RecentTransactions({ transactions }) {
   const today = new Date();
   const threeDaysAgo = new Date();
-  threeDaysAgo.setDate(today.getDate() - 3);
+  threeDaysAgo.setDate(today.getDate() - 1);
 
 
   const recentTransactions = transactions

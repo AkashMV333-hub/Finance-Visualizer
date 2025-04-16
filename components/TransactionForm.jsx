@@ -42,63 +42,65 @@ export default function TransactionForm({ setTransactions }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 p-4 rounded-lg border w-full max-w-xl mx-auto mt-10">
-      <h1 className='font-bold font-black text-2xl'>New Transaction</h1>
-      <div>
-        <Label className={"mb-3"}>Amount</Label>
-        <Input
-          type="number"
-          name="amount"
-          value={form.amount}
-          onChange={handleChange}
-        />
-      </div>
+    <div className='w-full bg-pink-100 border border-white p-12 flex flex-col justify-center items-center mt-12 rounded-xl'>
+      <form onSubmit={handleSubmit} className="space-y-4 p-4 rounded-lg border w-full max-w-xl mx-auto bg-white">
+        <h1 className='font-bold font-black text-2xl'>New Transaction</h1>
+        <div>
+          <Label className={"mb-3"}>Amount</Label>
+          <Input
+            type="number"
+            name="amount"
+            value={form.amount}
+            onChange={handleChange}
+          />
+        </div>
 
-      <div>
-        <Label className={"mb-3"}>Category</Label>
-        <select
-          name="category"
-          value={form.category}
-          onChange={handleChange}
-          className="w-full p-2 border rounded-md"
-        >
-          <option value="">Select Category</option>
-          <option value="Groceries">Groceries</option>
-          <option value="Food">Food</option>
-          <option value="Vegetables">Vegetables</option>
-          <option value="Transport">Transport</option>
-          <option value="Shopping">Shopping</option>
-          <option value="Bills">Bills</option>
-          <option value="Entertainment">Entertainment</option>
-          <option value="Health">Health</option>
-          <option value="Other">Other</option>
-        </select>
-      </div>
+        <div>
+          <Label className={"mb-3"}>Category</Label>
+          <select
+            name="category"
+            value={form.category}
+            onChange={handleChange}
+            className="w-full p-2 border rounded-md"
+          >
+            <option value="">Select Category</option>
+            <option value="Groceries">Groceries</option>
+            <option value="Food">Food</option>
+            <option value="Vegetables">Vegetables</option>
+            <option value="Transport">Transport</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Bills">Bills</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Health">Health</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
 
 
-      <div>
-        <Label className={"mb-3"}>Description</Label>
-        <Input
-          type="text"
-          name="description"
-          value={form.description}
-          onChange={handleChange}
-        />
-      </div>
+        <div>
+          <Label className={"mb-3"}>Description</Label>
+          <Input
+            type="text"
+            name="description"
+            value={form.description}
+            onChange={handleChange}
+          />
+        </div>
 
-      <div>
-        <Label className={"mb-3"}>Date</Label>
-        <Input
-          type="date"
-          name="date"
-          value={form.date}
-          onChange={handleChange}
-        />
-      </div>
+        <div>
+          <Label className={"mb-3"}>Date</Label>
+          <Input
+            type="date"
+            name="date"
+            value={form.date}
+            onChange={handleChange}
+          />
+        </div>
 
-      <Button type="submit" disabled={loading} >
-        {loading ? 'Saving...' : 'Add Transaction'}
-      </Button>
-    </form>
+        <Button type="submit" disabled={loading} >
+          {loading ? 'Saving...' : 'Add Transaction'}
+        </Button>
+      </form>
+    </div>
   );
 }

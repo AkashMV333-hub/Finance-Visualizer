@@ -123,8 +123,8 @@
   box-sizing: border-box;
 }
 
-.bgImg{
-  background-image: url("/bg.jpg");
+.bgTransactions{
+  background-image: url("/budgetBg3.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -132,6 +132,13 @@
 
 .bgCategory{
   background-image: url("/categoryBg1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bgBudget{
+  background-image: url("/budgetBg1.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
