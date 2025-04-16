@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 💸 Personal Finance Visualizer
 
-## Getting Started
+A sleek, full-featured web application to manage and visualize personal finances. Built with **Next.js**, **React**, **MongoDB**, **shadcn/ui**, and **Recharts**, it allows users to track expenses, categorize spending, set monthly budgets, and gain financial insights through intuitive visualizations.
 
-First, run the development server:
+---
+
+## ✨ Features
+
+### 🔹 Transaction Management
+- Add, edit, and delete transactions with details like amount, description, and date
+- View a complete, scrollable transaction list with recent highlights
+- Built-in form validation for clean data entry
+
+### 🔹 Smart Categorization
+- Predefined spending categories like Groceries, Transport, Entertainment, etc.
+- Filter and analyze transactions by category
+- Automatically organize data for better insights
+
+### 🔹 Visual Expense Analytics
+- **Monthly Expenses Bar Chart** to visualize trends over time
+- **Category-wise Pie Chart** to understand how spending is distributed
+- Responsive and interactive charts using Recharts
+
+### 🔹 Budget Tracking
+- Set category-wise budgets on a monthly basis
+- View **Budget vs Actual** spending side-by-side in a bar chart
+- Automatically detect overspending or savings
+
+### 🔹 Personalized Spending Insights
+- Receive real-time suggestions like:
+  - "You overspent by ₹500 on Food"
+  - "Congrats, you saved ₹300 in Transport"
+  - "Set a budget for Health to track spending"
+- Insights delivered in visually distinct cards for quick understanding
+
+### 🔹 Modern UI & UX
+- Built with [shadcn/ui](https://ui.shadcn.com/) for clean and accessible design
+- Fully mobile-responsive and optimized for all screen sizes
+- User-friendly navigation with a toggling Navbar
+
+---
+
+## 🛠 Tech Stack
+
+- **Framework:** Next.js 14 (App Router)
+- **Frontend:** React, Tailwind CSS, shadcn/ui
+- **Database:** MongoDB (Mongoose ORM)
+- **Charts:** Recharts
+- **API:** RESTful API routes via Next.js
+
+---
+
+## 📦 Getting Started
 
 ```bash
+# Clone the repo
+git clone https://github.com/yourusername/finance-visualizer.git
+cd finance-visualizer
+
+# Install dependencies
+npm install
+
+# Add MongoDB URI to .env.local
+touch .env.local
+.env.local
+MONGODB_URI=your_mongodb_connection_string
+
+Then run:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
