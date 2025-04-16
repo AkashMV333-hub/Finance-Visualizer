@@ -74,5 +74,5 @@ touch .env.local
 .env.local
 MONGODB_URI=your_mongodb_connection_string
 
-Then run:
+#Then run:
 npm run dev
