@@ -11,10 +11,15 @@ A sleek, full-featured web application to manage and visualize personal finances
 - View a complete, scrollable transaction list with recent highlights
 - Built-in form validation for clean data entry
 
+  ![Screenshot 2025-04-16 222309](https://github.com/user-attachments/assets/5200fc5a-f781-43c5-86fe-badff9649d18)
+  ![Screenshot 2025-04-16 222406](https://github.com/user-attachments/assets/13e4aba6-061d-4b3d-9d90-387fe9e2ec40)
+
 ### 🔹 Smart Categorization
 - Predefined spending categories like Groceries, Transport, Entertainment, etc.
 - Filter and analyze transactions by category
 - Automatically organize data for better insights
+
+  ![Screenshot 2025-04-16 222455](https://github.com/user-attachments/assets/2cff65ae-1cea-4054-93d5-d13b5ae64357)
 
 ### 🔹 Visual Expense Analytics
 - **Monthly Expenses Bar Chart** to visualize trends over time
@@ -25,6 +30,10 @@ A sleek, full-featured web application to manage and visualize personal finances
 - Set category-wise budgets on a monthly basis
 - View **Budget vs Actual** spending side-by-side in a bar chart
 - Automatically detect overspending or savings
+
+  ![Screenshot 2025-04-16 222550](https://github.com/user-attachments/assets/585d32da-3e19-462a-873b-5fc8cb1bf048)
+  ![Screenshot 2025-04-16 222558](https://github.com/user-attachments/assets/ba7ba8e8-e890-43fe-9093-80c3ee0e2f2b)
+  
 
 ### 🔹 Personalized Spending Insights
 - Receive real-time suggestions like:
